@@ -3,123 +3,461 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artist Portfolio</title>
+  <title>Udi Berg — Sculpture, Painting, Ceramics & Blacksmithing</title>
+  <meta
+    name="description"
+    content="Udi Berg is a multidisciplinary artist working across sculpture, painting, sketching, ceramics, and blacksmithing."
+  />
   <style>
     :root {
-      --bg: #0f0f12;
-      --card: rgba(255,255,255,0.08);
-      --text: #f6f2ea;
-      --muted: #c8c1b6;
-      --accent: #d7a86e;
-      --line: rgba(255,255,255,0.14);
+      --bg: #111111;
+      --bg-soft: #171717;
+      --paper: #f2ede4;
+      --muted: #b7aa97;
+      --line: rgba(242, 237, 228, 0.14);
+      --gold: #c9a56a;
+      --gold-soft: rgba(201, 165, 106, 0.16);
+      --max: 1240px;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, system-ui, sans-serif;
       background:
-        radial-gradient(circle at top, rgba(215,168,110,0.18), transparent 30%),
-        linear-gradient(180deg, #15151a 0%, var(--bg) 100%);
-      color: var(--text);
+        radial-gradient(circle at top left, rgba(201,165,106,.18), transparent 28%),
+        radial-gradient(circle at 85% 8%, rgba(201,165,106,.12), transparent 18%),
+        linear-gradient(180deg, #181818 0%, var(--bg) 100%);
+      color: var(--paper);
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0.01em;
     }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 24px; }
-    header {
-      min-height: 78vh;
-      display: grid;
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    .eyebrow {
+      font-size: 0.76rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(12, 12, 12, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
       align-items: center;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 24px;
+      justify-content: space-between;
+      gap: 18px;
     }
-    .hero, .panel {
-      background: var(--card);
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .brand small {
+      display: block;
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      margin-top: 4px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--paper); }
+    .hero {
+      padding: 88px 0 52px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    .hero-copy, .hero-visual, .panel, .about-card, .contact-card {
       border: 1px solid var(--line);
-      backdrop-filter: blur(12px);
-      border-radius: 24px;
-      padding: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius: 28px;
+      overflow: hidden;
     }
-    h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); line-height: 0.95; margin: 0 0 16px; }
-    p { color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
-    .kicker { text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); font-size: 0.8rem; margin-bottom: 14px; }
-    .cta {
-      display: inline-block; margin-top: 16px; padding: 12px 18px; border-radius: 999px;
-      background: var(--accent); color: #22170d; text-decoration: none; font-weight: 700;
+    .hero-copy { padding: 42px; }
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 0.95;
+      margin: 0;
+      letter-spacing: -0.02em;
     }
-    .grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 36px 0;
+    h1 { font-size: clamp(3.3rem, 8vw, 7.1rem); margin-bottom: 18px; }
+    h2 { font-size: clamp(2.1rem, 5vw, 4rem); margin-bottom: 18px; }
+    h3 { font-size: 1.6rem; margin-bottom: 12px; }
+    .lead {
+      color: var(--paper);
+      font-size: 1.08rem;
+      max-width: 58ch;
     }
-    .art {
-      aspect-ratio: 4 / 5; border-radius: 18px; border: 1px solid var(--line);
-      background: linear-gradient(135deg, rgba(215,168,110,0.35), rgba(122,76,171,0.25), rgba(58,103,132,0.28));
-      position: relative; overflow: hidden;
+    .muted { color: var(--muted); }
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
     }
-    .art::after {
-      content: "Artwork";
-      position: absolute; inset: auto 14px 14px auto;
-      background: rgba(15,15,18,0.65); border: 1px solid var(--line);
-      padding: 8px 12px; border-radius: 999px; font-size: 0.85rem;
+    .button, .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid transparent;
     }
-    section { margin: 30px 0 48px; }
-    .about {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    .button { background: var(--gold); color: #1b1610; }
+    .button-secondary {
+      color: var(--paper);
+      border-color: var(--line);
+      background: rgba(255,255,255,0.03);
     }
-    footer { padding: 10px 0 40px; color: var(--muted); }
-    @media (max-width: 800px) {
-      header, .about, .grid { grid-template-columns: 1fr; }
-      header { min-height: auto; padding-top: 10px; }
-      h1 { font-size: 3rem; }
+    .hero-visual {
+      min-height: 520px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.28)),
+        linear-gradient(135deg, rgba(201,165,106,.5), rgba(90,56,42,.14) 35%, rgba(34,34,34,.5) 68%, rgba(111,86,46,.28));
+      position: relative;
+    }
+    .hero-visual::before,
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      border: 1px solid rgba(242,237,228,.18);
+      opacity: .75;
+    }
+    .hero-visual::before {
+      width: 320px; height: 320px; right: -70px; top: 28px;
+      background: radial-gradient(circle, rgba(242,237,228,.16), transparent 68%);
+    }
+    .hero-visual::after {
+      width: 180px; height: 180px; left: 32px; bottom: 32px;
+      background: radial-gradient(circle, rgba(201,165,106,.22), transparent 70%);
+    }
+    .visual-caption {
+      position: absolute;
+      left: 24px; right: 24px; bottom: 24px;
+      border: 1px solid var(--line);
+      background: rgba(13,13,13,.62);
+      border-radius: 22px;
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+    section { padding: 26px 0; }
+    .disciplines {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .discipline {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--paper);
+      min-height: 110px;
+    }
+    .discipline span {
+      display: block;
+      color: var(--muted);
+      font-size: .92rem;
+      margin-top: 8px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 18px;
+    }
+    .art-card {
+      min-height: 390px;
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.35)),
+        linear-gradient(145deg, rgba(214,175,111,.35), rgba(91,57,43,.18) 36%, rgba(38,38,38,.7) 80%);
+    }
+    .art-card.tall { min-height: 560px; }
+    .art-card:nth-child(2) {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.38)),
+        linear-gradient(155deg, rgba(90,80,67,.28), rgba(170,131,95,.22), rgba(31,31,31,.8));
+    }
+    .art-card:nth-child(3) {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.38)),
+        linear-gradient(135deg, rgba(113,85,63,.18), rgba(154,120,76,.34), rgba(28,28,28,.8));
+    }
+    .art-meta {
+      position: absolute;
+      left: 18px; right: 18px; bottom: 18px;
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(10,10,10,.62);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .art-meta strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .about-card, .contact-card, .panel { padding: 34px; }
+    .quote {
+      margin-top: 22px;
+      padding-left: 18px;
+      border-left: 2px solid var(--gold);
+      color: var(--paper);
+      font-family: Georgia, serif;
+      font-size: 1.18rem;
+    }
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 0;
+    }
+    .contact-item {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+    }
+    .contact-item small {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .68rem;
+      margin-bottom: 6px;
+    }
+    footer {
+      padding: 32px 0 56px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    @media (max-width: 980px) {
+      .hero, .split, .gallery-grid, .disciplines { grid-template-columns: 1fr 1fr; }
+      .gallery-grid .tall { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .nav-inner, .section-head { display: block; }
+      .nav-links { margin-top: 14px; }
+      .hero, .split, .gallery-grid, .disciplines { grid-template-columns: 1fr; }
+      .hero-copy, .about-card, .contact-card, .panel { padding: 24px; }
+      .hero { padding-top: 42px; }
+      .hero-visual { min-height: 420px; }
+      h1 { font-size: 3.2rem; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="hero">
-        <div class="kicker">Portfolio Starter</div>
-        <h1>Artist Dad</h1>
-        <p>
-          A clean, elegant portfolio base for showcasing paintings, drawings, commissions,
-          exhibitions, and contact details. This is the starter version — ready to customize
-          with real artwork, biography, and links.
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Udi Berg<small>Sculpture · Painting · Ceramics · Blacksmithing</small></a>
+      <div class="nav-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Artist Portfolio</div>
+        <h1>Material, fire, gesture, form.</h1>
+        <p class="lead">
+          Udi Berg is a multidisciplinary artist whose practice moves between sculpture,
+          painting, sketching, ceramics, and blacksmithing — building works that feel at once
+          elemental, tactile, and deeply human.
         </p>
-        <a class="cta" href="#gallery">View Gallery</a>
+        <p class="muted">
+          This portfolio is designed to present a refined artistic identity for collectors,
+          curators, galleries, and collaborators seeking work with craft, presence, and gravitas.
+        </p>
+        <div class="actions">
+          <a class="button" href="#gallery">View Selected Work</a>
+          <a class="button-secondary" href="#contact">Request Contact</a>
+        </div>
       </div>
-      <div class="panel">
-        <p><strong>What’s included now</strong></p>
-        <p>• Hero section<br/>• Gallery placeholders<br/>• About section<br/>• Contact section<br/>• Mobile-friendly layout</p>
-        <p><strong>Next easy step</strong><br/>Replace placeholders with his real work and short bio.</p>
+      <div class="hero-visual">
+        <div class="visual-caption">
+          <div class="eyebrow" style="margin-bottom:8px;">Studio Practice</div>
+          <div>
+            A luxury editorial-style landing section, intended to be replaced later with a real
+            hero artwork or studio photograph.
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Disciplines</div>
+          <h2>Across mediums, with one hand.</h2>
+        </div>
+        <p class="muted" style="max-width: 46ch; margin: 0;">
+          The site is shaped like a contemporary gallery portfolio: restrained typography, generous
+          space, strong material tones, and a quiet sense of luxury.
+        </p>
+      </div>
+      <div class="disciplines">
+        <div class="discipline"><strong>Sculpture</strong><span>Form, volume, physical presence.</span></div>
+        <div class="discipline"><strong>Painting</strong><span>Surface, atmosphere, emotion.</span></div>
+        <div class="discipline"><strong>Sketches</strong><span>Gesture, structure, first thought.</span></div>
+        <div class="discipline"><strong>Ceramics</strong><span>Earth, fire, touch, ritual.</span></div>
+        <div class="discipline"><strong>Blacksmithing</strong><span>Heat, force, forged precision.</span></div>
+      </div>
+    </section>
 
     <section id="gallery">
-      <div class="kicker">Selected Work</div>
-      <div class="grid">
-        <div class="art"></div>
-        <div class="art"></div>
-        <div class="art"></div>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Gallery</div>
+          <h2>Selected work</h2>
+        </div>
+        <p class="muted" style="max-width: 40ch; margin: 0;">
+          For now, these are elegant placeholders. The structure is ready for real artwork images,
+          titles, years, media, and dimensions.
+        </p>
+      </div>
+      <div class="gallery-grid">
+        <article class="art-card tall">
+          <div class="art-meta">
+            <strong>Monument Study I</strong>
+            <div class="muted">Placeholder for a major sculpture or installation image.</div>
+          </div>
+        </article>
+        <article class="art-card">
+          <div class="art-meta">
+            <strong>Surface / Memory</strong>
+            <div class="muted">Placeholder for a painting, ceramic work, or detail crop.</div>
+          </div>
+        </article>
+        <article class="art-card">
+          <div class="art-meta">
+            <strong>Forged Gesture</strong>
+            <div class="muted">Placeholder for blacksmithing, sketchbook, or studio process.</div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="about">
-      <div class="hero">
-        <div class="kicker">About</div>
+    <section id="about" class="split">
+      <div class="about-card">
+        <div class="eyebrow">About</div>
+        <h2>Udi Berg</h2>
         <p>
-          This section can introduce the artist, artistic influences, medium, and recent exhibitions.
-          It is intentionally short for now so we can shape the voice later.
+          Udi Berg is an artist working between sculpture, painting, ceramics, blacksmithing,
+          and drawing. His practice is rooted in material intelligence: the resistance of metal,
+          the weight of clay, the immediacy of line, the slow construction of surface, and the
+          tension between raw force and refined form.
         </p>
-      </div>
-      <div class="hero">
-        <div class="kicker">Contact</div>
         <p>
-          Email: artist@example.com<br/>
-          Instagram: @artistname<br/>
-          Available for commissions and exhibitions.
+          Across mediums, Berg’s work carries a shared language of tactility and presence. Whether
+          shaping a forged element, building a sculptural body, or developing a painted surface,
+          he returns to questions of structure, memory, labor, and transformation. The result is a
+          body of work that feels both grounded and elevated — handmade, rigorous, and unmistakably personal.
+        </p>
+        <div class="quote">
+          “A refined portfolio for collectors, curators, and galleries begins by letting the work feel serious.”
+        </div>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Positioning</div>
+        <h3>Built to appeal to a high-end audience</h3>
+        <p>
+          The visual direction borrows from strong contemporary artist sites and luxury gallery
+          presentations: fewer distractions, more atmosphere, excellent spacing, and a sense of confidence.
+        </p>
+        <p>
+          Once you send real works, I can turn this into a much stronger collector-facing portfolio with:
+        </p>
+        <p class="muted">
+          • real artwork images<br />
+          • curated series or collections<br />
+          • exhibition / press section<br />
+          • downloadable portfolio PDF<br />
+          • inquiry form for galleries and commissions
         </p>
       </div>
     </section>
 
-    <footer>
-      Built as a simple GitHub Pages starter.
-    </footer>
-  </div>
+    <section id="contact" class="split">
+      <div class="contact-card">
+        <div class="eyebrow">Contact</div>
+        <h2>Studio inquiries</h2>
+        <p class="muted">
+          For exhibitions, commissions, acquisitions, and professional inquiries, please use the details below.
+        </p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <small>Phone</small>
+            <a href="tel:+972544803703">054-480-3703</a>
+          </div>
+          <div class="contact-item">
+            <small>Email</small>
+            <a href="mailto:drehudberg@gmail.com">drehudberg@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Next step</div>
+        <h3>Ready for the real artwork</h3>
+        <p>
+          The foundation is now professional and collector-facing. The next big leap is simple:
+          replace the placeholder panels with actual pieces and, if you want, I can curate the order
+          so the site feels like a real gallery presentation rather than a generic portfolio.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Udi Berg — portfolio starter site. Crafted for a refined, gallery-style presentation.
+    </div>
+  </footer>
 </body>
 </html>
