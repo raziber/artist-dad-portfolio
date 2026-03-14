@@ -44,6 +44,41 @@
     .quote { margin-top:22px; padding-left:18px; border-left:2px solid var(--gold); font-family:Georgia, serif; font-size:1.16rem; }
     .contact-list { display:grid; gap:14px; margin-top:24px; } .contact-item { padding:16px 18px; border-radius:18px; background:rgba(255,255,255,.03); border:1px solid var(--line); } .contact-item small { display:block; color:var(--muted); text-transform:uppercase; letter-spacing:.18em; font-size:.68rem; margin-bottom:6px; }
     footer { padding:32px 0 56px; color:var(--muted); font-size:.92rem; }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 1000;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: min(96vw, 1600px);
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      box-shadow: 0 24px 80px rgba(0,0,0,.45);
+      border-radius: 10px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: white;
+      font-size: 26px;
+      line-height: 1;
+      cursor: pointer;
+    }
     @media (max-width:1100px) { .disciplines { grid-template-columns:repeat(3,1fr); } .work { grid-column:span 6; } .work.wide { grid-column:span 12; } }
     @media (max-width:820px) { .hero, .split, .disciplines { grid-template-columns:1fr; } .hero-visual { min-height:440px; } .work, .work.wide { grid-column:span 12; } }
     @media (max-width:720px) { .nav-inner, .section-head { display:block; } .nav-links { margin-top:14px; } .hero-copy, .panel { padding:24px; } .hero { padding-top:42px; } h1 { font-size:3.15rem; } }
@@ -110,67 +145,67 @@
         <p class="muted" style="max-width: 40ch; margin: 0;">Handbuilt and fired forms with tactile surfaces, silhouette, and warmth.</p>
       </div>
       <div class="gallery-grid">
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/ceramic_01.jpg" alt="Ceramic 01 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 01</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_02.JPG" alt="Ceramic 02 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 02</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_03.JPG" alt="Ceramic 03 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 03</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work tall">
+        <article class="work tall js-lightbox-trigger">
           <img src="assets/gallery/ceramic_04.JPG" alt="Ceramic 04 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 04</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_05.JPG" alt="Ceramic 05 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 05</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/ceramic_06.JPG" alt="Ceramic 06 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 06</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_07.JPG" alt="Ceramic 07 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 07</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work tall">
+        <article class="work tall js-lightbox-trigger">
           <img src="assets/gallery/ceramic_08.JPG" alt="Ceramic 08 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 08</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_09.JPG" alt="Ceramic 09 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 09</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_10.JPG" alt="Ceramic 10 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 10</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/ceramic_11.JPG" alt="Ceramic 11 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 11</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work tall">
+        <article class="work tall js-lightbox-trigger">
           <img src="assets/gallery/ceramic_12.JPG" alt="Ceramic 12 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 12</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_13.JPG" alt="Ceramic 13 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 13</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_14.JPG" alt="Ceramic 14 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 14</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/ceramic_15.JPG" alt="Ceramic 15 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 15</strong><div class="muted">Ceramics.</div></div>
         </article>
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/ceramic_16.JPG" alt="Ceramic 16 by Udi Berg" />
           <div class="work-meta"><strong>Ceramic 16</strong><div class="muted">Ceramics.</div></div>
         </article>
@@ -185,23 +220,23 @@
         <p class="muted" style="max-width: 40ch; margin: 0;">Metal works with weight, patina, and sculptural presence.</p>
       </div>
       <div class="gallery-grid">
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/bronze_01.jpg" alt="Bronze 01 by Udi Berg" />
           <div class="work-meta"><strong>Bronze 01</strong><div class="muted">Bronze.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/bronze_02.JPG" alt="Bronze 02 by Udi Berg" />
           <div class="work-meta"><strong>Bronze 02</strong><div class="muted">Bronze.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/bronze_03.JPG" alt="Bronze 03 by Udi Berg" />
           <div class="work-meta"><strong>Bronze 03</strong><div class="muted">Bronze.</div></div>
         </article>
-        <article class="work tall">
+        <article class="work tall js-lightbox-trigger">
           <img src="assets/gallery/bronze_04.JPG" alt="Bronze 04 by Udi Berg" />
           <div class="work-meta"><strong>Bronze 04</strong><div class="muted">Bronze.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/bronze_05.JPG" alt="Bronze 05 by Udi Berg" />
           <div class="work-meta"><strong>Bronze 05</strong><div class="muted">Bronze.</div></div>
         </article>
@@ -216,31 +251,31 @@
         <p class="muted" style="max-width: 40ch; margin: 0;">Large painted surfaces with atmosphere, gesture, and memory.</p>
       </div>
       <div class="gallery-grid">
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/painting_01.JPG" alt="Painting 01 by Udi Berg" />
           <div class="work-meta"><strong>Painting 01</strong><div class="muted">Paintings.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/painting_02.jpg" alt="Painting 02 by Udi Berg" />
           <div class="work-meta"><strong>Painting 02</strong><div class="muted">Paintings.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/painting_03.jpg" alt="Painting 03 by Udi Berg" />
           <div class="work-meta"><strong>Painting 03</strong><div class="muted">Paintings.</div></div>
         </article>
-        <article class="work tall">
+        <article class="work tall js-lightbox-trigger">
           <img src="assets/gallery/painting_04.JPG" alt="Painting 04 by Udi Berg" />
           <div class="work-meta"><strong>Painting 04</strong><div class="muted">Paintings.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/painting_05.JPG" alt="Painting 05 by Udi Berg" />
           <div class="work-meta"><strong>Painting 05</strong><div class="muted">Paintings.</div></div>
         </article>
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/painting_06.JPG" alt="Painting 06 by Udi Berg" />
           <div class="work-meta"><strong>Painting 06</strong><div class="muted">Paintings.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/painting_07.JPG" alt="Painting 07 by Udi Berg" />
           <div class="work-meta"><strong>Painting 07</strong><div class="muted">Paintings.</div></div>
         </article>
@@ -255,19 +290,19 @@
         <p class="muted" style="max-width: 40ch; margin: 0;">Works from the dragon category, presented as a distinct series.</p>
       </div>
       <div class="gallery-grid">
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/dragon_01.jpg" alt="Dragon 01 by Udi Berg" />
           <div class="work-meta"><strong>Dragon 01</strong><div class="muted">Dragon Series.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/dragon_02.JPG" alt="Dragon 02 by Udi Berg" />
           <div class="work-meta"><strong>Dragon 02</strong><div class="muted">Dragon Series.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/dragon_03.jpg" alt="Dragon 03 by Udi Berg" />
           <div class="work-meta"><strong>Dragon 03</strong><div class="muted">Dragon Series.</div></div>
         </article>
-        <article class="work tall">
+        <article class="work tall js-lightbox-trigger">
           <img src="assets/gallery/dragon_04.jpg" alt="Dragon 04 by Udi Berg" />
           <div class="work-meta"><strong>Dragon 04</strong><div class="muted">Dragon Series.</div></div>
         </article>
@@ -282,11 +317,11 @@
         <p class="muted" style="max-width: 40ch; margin: 0;">Forged works shaped by heat, force, and precision.</p>
       </div>
       <div class="gallery-grid">
-        <article class="work wide">
+        <article class="work wide js-lightbox-trigger">
           <img src="assets/gallery/black_smithing_01.JPG" alt="Black Smithing 01 by Udi Berg" />
           <div class="work-meta"><strong>Black Smithing 01</strong><div class="muted">Blacksmithing.</div></div>
         </article>
-        <article class="work">
+        <article class="work js-lightbox-trigger">
           <img src="assets/gallery/black_smithing_02.JPG" alt="Black Smithing 02 by Udi Berg" />
           <div class="work-meta"><strong>Black Smithing 02</strong><div class="muted">Blacksmithing.</div></div>
         </article>
@@ -324,5 +359,40 @@
     </section>
   </main>
   <footer><div class="container">Udi Berg — gallery-style portfolio site.</div></footer>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <img id="lightboxImage" src="" alt="Expanded artwork" />
+  </div>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.js-lightbox-trigger img').forEach((img) => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      lightboxImage.src = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+    });
+  </script>
 </body>
 </html>
