@@ -10,6 +10,7 @@ Turn this into a polished, public-facing portfolio for Udi Berg with no placehol
 - Kept the current hero image by request
 - Curated the gallery down to a tighter selection so the site feels more intentional
 - Tightened the About copy to feel more specific and less generic
+- Switched the About section to first person so the portfolio speaks more directly in Udi’s voice
 - Added this repo TODO so future sessions know what to do next
 
 ## Next recommended steps
