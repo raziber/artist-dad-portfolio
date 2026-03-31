@@ -37,9 +37,10 @@
     .work { grid-column:span 4; position:relative; border-radius:24px; overflow:hidden; border:1px solid var(--line); background:#0e0e0e; min-height:320px; box-shadow:var(--shadow); cursor:zoom-in; }
     .work.tall { min-height:520px; } .work.wide { grid-column:span 8; }
     .work img { width:100%; height:100%; object-fit:cover; filter:saturate(.92) contrast(1.02) brightness(.95); transition:transform .6s ease; } .work:hover img { transform:scale(1.03); }
-    .work::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.55)); pointer-events:none; }
-    .work-meta { position:absolute; left:16px; right:16px; bottom:16px; z-index:1; padding:14px 16px; border-radius:18px; background:rgba(12,12,12,.58); border:1px solid rgba(255,255,255,.08); backdrop-filter:blur(10px); pointer-events:none; }
-    .work-meta strong { display:block; font-family:Georgia, serif; font-size:1.04rem; font-weight:500; margin-bottom:4px; }
+    .work::after { content:""; position:absolute; left:0; right:0; bottom:0; height:34%; background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.28) 55%, rgba(0,0,0,.48)); pointer-events:none; }
+    .work-meta { position:absolute; left:16px; right:16px; bottom:14px; z-index:1; pointer-events:none; text-shadow:0 2px 10px rgba(0,0,0,.85); }
+    .work-meta strong { display:block; font-family:Georgia, serif; font-size:1rem; font-weight:500; margin-bottom:2px; }
+    .work-meta .muted { color:rgba(242,237,228,.78); font-size:.86rem; }
     .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; } .panel { padding:34px; }
     .quote { margin-top:22px; padding-left:18px; border-left:2px solid var(--gold); font-family:Georgia, serif; font-size:1.16rem; }
     .contact-list { display:grid; gap:14px; margin-top:24px; } .contact-item { padding:16px 18px; border-radius:18px; background:rgba(255,255,255,.03); border:1px solid var(--line); } .contact-item small { display:block; color:var(--muted); text-transform:uppercase; letter-spacing:.18em; font-size:.68rem; margin-bottom:6px; }
@@ -138,7 +139,7 @@
         </div>
         <div class="discipline">
           <img src="assets/gallery/dragon_02.JPG" alt="Sketch by Udi Berg" />
-          <strong>Sketches</strong><span>Gesture, urgency, first thought.</span>
+          <strong>Paintings & Drawings</strong><span>Gesture, urgency, first thought.</span>
         </div>
         <div class="discipline">
           <img src="assets/gallery/ceramic_01.jpg" alt="Ceramic work by Udi Berg" />
