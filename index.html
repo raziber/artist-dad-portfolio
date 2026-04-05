@@ -16,15 +16,19 @@
         <div class="brand">
           <a class="brand-title" href="#top">Udi Berg</a>
           <small class="brand-subnav">
-            <span><a href="#ceramic">Ceramics</a></span>
+            <span><a data-category-link="ceramics" href="#ceramic"></a></span>
             <span class="sep">·</span>
-            <span><a href="#bronze">Bronze</a></span>
+            <span><a data-category-link="bronze" href="#bronze"></a></span>
             <span class="sep">·</span>
-            <span><a href="#painting">Paintings & Drawings</a></span>
+            <span>
+              <a data-category-link="paintings-drawings" href="#painting"></a>
+            </span>
             <span class="sep">·</span>
-            <span><a href="#black-smithing">Blacksmithing</a></span>
+            <span>
+              <a data-category-link="blacksmithing" href="#black-smithing"></a>
+            </span>
             <span class="sep">·</span>
-            <span><a href="#projects">Projects</a></span>
+            <span><a data-category-link="projects" href="#projects"></a></span>
           </small>
         </div>
         <div class="nav-cluster">
@@ -59,52 +63,66 @@
         </div>
         <div class="card hero-disciplines">
           <div class="disciplines">
-            <a class="discipline" href="#bronze">
-              <img
-                src="assets/gallery/bronze_01.jpg"
-                alt="Sculpture from my studio"
-              />
-              <strong>Sculpture</strong
-              ><span>Form, volume, physical presence.</span>
-            </a>
-            <a class="discipline" href="#painting">
-              <img
-                src="assets/gallery/painting_01.JPG"
-                alt="Painting from my studio"
-              />
-              <strong>Painting</strong><span>Surface, atmosphere, memory.</span>
-            </a>
-            <a class="discipline" href="#painting">
-              <img
-                src="assets/gallery/dragon_02.JPG"
-                alt="Sketch from my studio"
-              />
-              <strong>Paintings & Drawings</strong
-              ><span>Gesture, urgency, first thought.</span>
-            </a>
-            <a class="discipline" href="#ceramic">
+            <a class="discipline" data-category-href="ceramics" href="#ceramic">
               <img
                 src="assets/gallery/ceramic_01.jpg"
                 alt="Ceramic work from my studio"
               />
-              <strong>Ceramics</strong><span>Earth, fire, touch, ritual.</span>
+              <strong data-category-label="ceramics"></strong
+              ><span>Earth, fire, touch, ritual.</span>
             </a>
-            <a class="discipline" href="#black-smithing">
+            <a class="discipline" data-category-href="bronze" href="#bronze">
+              <img
+                src="assets/gallery/bronze_01.jpg"
+                alt="Sculpture from my studio"
+              />
+              <strong data-category-label="bronze"></strong
+              ><span>Form, volume, physical presence.</span>
+            </a>
+            <a
+              class="discipline"
+              data-category-href="paintings-drawings"
+              href="#painting"
+            >
+              <img
+                src="assets/gallery/painting_01.JPG"
+                alt="Painting from my studio"
+              />
+              <strong data-category-label="paintings-drawings"></strong
+              ><span>Surface, atmosphere, memory.</span>
+            </a>
+            <a
+              class="discipline"
+              data-category-href="blacksmithing"
+              href="#black-smithing"
+            >
               <img
                 src="assets/gallery/black_smithing_01.JPG"
                 alt="Blacksmithing from my studio"
               />
-              <strong>Blacksmithing</strong
+              <strong data-category-label="blacksmithing"></strong
               ><span>Heat, force, forged precision.</span>
+            </a>
+            <a
+              class="discipline"
+              data-category-href="projects"
+              href="#projects"
+            >
+              <img
+                src="assets/gallery/dragon_02.JPG"
+                alt="Sketch from my studio"
+              />
+              <strong data-category-label="projects"></strong
+              ><span>Gesture, urgency, first thought.</span>
             </a>
           </div>
         </div>
       </section>
-      <section id="ceramic">
+      <section id="ceramic" data-category-section="ceramics">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Ceramics</div>
-            <h2>Ceramics</h2>
+            <div class="eyebrow" data-category-label="ceramics"></div>
+            <h2 data-category-label="ceramics"></h2>
           </div>
         </div>
         <div class="gallery-grid">
@@ -113,50 +131,62 @@
               src="assets/gallery/ceramic_06.JPG"
               alt="Ceramic work from my studio"
             />
-            <div class="work-meta"><strong>Ceramics</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="ceramics"></strong>
+            </div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_04.JPG"
               alt="Ceramic work from my studio"
             />
-            <div class="work-meta"><strong>Ceramics</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="ceramics"></strong>
+            </div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_08.JPG"
               alt="Ceramic work from my studio"
             />
-            <div class="work-meta"><strong>Ceramics</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="ceramics"></strong>
+            </div>
           </article>
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_11.JPG"
               alt="Ceramic work from my studio"
             />
-            <div class="work-meta"><strong>Ceramics</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="ceramics"></strong>
+            </div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_14.JPG"
               alt="Ceramic work from my studio"
             />
-            <div class="work-meta"><strong>Ceramics</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="ceramics"></strong>
+            </div>
           </article>
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_16.JPG"
               alt="Ceramic work from my studio"
             />
-            <div class="work-meta"><strong>Ceramics</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="ceramics"></strong>
+            </div>
           </article>
         </div>
       </section>
-      <section id="bronze">
+      <section id="bronze" data-category-section="bronze">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Bronze</div>
-            <h2>Bronze</h2>
+            <div class="eyebrow" data-category-label="bronze"></div>
+            <h2 data-category-label="bronze"></h2>
           </div>
         </div>
         <div class="gallery-grid">
@@ -165,36 +195,44 @@
               src="assets/gallery/bronze_01.jpg"
               alt="Bronze work from my studio"
             />
-            <div class="work-meta"><strong>Bronze</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="bronze"></strong>
+            </div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/bronze_02.JPG"
               alt="Bronze work from my studio"
             />
-            <div class="work-meta"><strong>Bronze</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="bronze"></strong>
+            </div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/bronze_04.JPG"
               alt="Bronze work from my studio"
             />
-            <div class="work-meta"><strong>Bronze</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="bronze"></strong>
+            </div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/bronze_05.JPG"
               alt="Bronze work from my studio"
             />
-            <div class="work-meta"><strong>Bronze</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="bronze"></strong>
+            </div>
           </article>
         </div>
       </section>
-      <section id="painting">
+      <section id="painting" data-category-section="paintings-drawings">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Paintings & Drawings</div>
-            <h2>Paintings & Drawings</h2>
+            <div class="eyebrow" data-category-label="paintings-drawings"></div>
+            <h2 data-category-label="paintings-drawings"></h2>
           </div>
         </div>
         <div class="gallery-grid">
@@ -203,43 +241,81 @@
               src="assets/gallery/painting_01.JPG"
               alt="Painting from my studio"
             />
-            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="paintings-drawings"></strong>
+            </div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/painting_03.jpg"
               alt="Painting from my studio"
             />
-            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="paintings-drawings"></strong>
+            </div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/painting_04.JPG"
               alt="Painting from my studio"
             />
-            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="paintings-drawings"></strong>
+            </div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/painting_05.JPG"
               alt="Painting from my studio"
             />
-            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="paintings-drawings"></strong>
+            </div>
           </article>
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/painting_06.JPG"
               alt="Painting from my studio"
             />
-            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
+            <div class="work-meta">
+              <strong data-category-label="paintings-drawings"></strong>
+            </div>
           </article>
         </div>
       </section>
-      <section id="projects">
+      <section id="black-smithing" data-category-section="blacksmithing">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Projects</div>
-            <h2>Projects</h2>
+            <div class="eyebrow" data-category-label="blacksmithing"></div>
+            <h2 data-category-label="blacksmithing"></h2>
+          </div>
+        </div>
+        <div class="gallery-grid">
+          <article class="work wide js-lightbox-trigger">
+            <img
+              src="assets/gallery/black_smithing_01.JPG"
+              alt="Blacksmithing work from my studio"
+            />
+            <div class="work-meta">
+              <strong data-category-label="blacksmithing"></strong>
+            </div>
+          </article>
+          <article class="work js-lightbox-trigger">
+            <img
+              src="assets/gallery/black_smithing_02.JPG"
+              alt="Blacksmithing work from my studio"
+            />
+            <div class="work-meta">
+              <strong data-category-label="blacksmithing"></strong>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="projects" data-category-section="projects">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-category-label="projects"></div>
+            <h2 data-category-label="projects"></h2>
           </div>
         </div>
         <h3 class="project-subtitle">Dragon Series</h3>
@@ -274,30 +350,6 @@
           </article>
         </div>
         <p class="project-coming">More projects coming soon</p>
-      </section>
-      <section id="black-smithing">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Blacksmithing</div>
-            <h2>Blacksmithing</h2>
-          </div>
-        </div>
-        <div class="gallery-grid">
-          <article class="work wide js-lightbox-trigger">
-            <img
-              src="assets/gallery/black_smithing_01.JPG"
-              alt="Blacksmithing work from my studio"
-            />
-            <div class="work-meta"><strong>Blacksmithing</strong></div>
-          </article>
-          <article class="work js-lightbox-trigger">
-            <img
-              src="assets/gallery/black_smithing_02.JPG"
-              alt="Blacksmithing work from my studio"
-            />
-            <div class="work-meta"><strong>Blacksmithing</strong></div>
-          </article>
-        </div>
       </section>
       <section id="about" class="split">
         <div class="card panel">
@@ -352,6 +404,46 @@
       <img id="lightboxImage" src="" alt="Expanded artwork" />
     </div>
     <script>
+      const CATEGORIES = {
+        ceramics: { label: "Ceramics", anchor: "ceramic" },
+        bronze: { label: "Bronze", anchor: "bronze" },
+        "paintings-drawings": {
+          label: "Paintings & Drawings",
+          anchor: "painting",
+        },
+        blacksmithing: { label: "Blacksmithing", anchor: "black-smithing" },
+        projects: { label: "Projects", anchor: "projects" },
+      };
+
+      document.querySelectorAll("[data-category-label]").forEach((node) => {
+        const key = node.getAttribute("data-category-label");
+        const category = CATEGORIES[key];
+        if (!category) return;
+        node.textContent = category.label;
+      });
+
+      document.querySelectorAll("[data-category-link]").forEach((node) => {
+        const key = node.getAttribute("data-category-link");
+        const category = CATEGORIES[key];
+        if (!category) return;
+        node.textContent = category.label;
+        node.setAttribute("href", `#${category.anchor}`);
+      });
+
+      document.querySelectorAll("[data-category-section]").forEach((node) => {
+        const key = node.getAttribute("data-category-section");
+        const category = CATEGORIES[key];
+        if (!category) return;
+        node.id = category.anchor;
+      });
+
+      document.querySelectorAll("[data-category-href]").forEach((node) => {
+        const key = node.getAttribute("data-category-href");
+        const category = CATEGORIES[key];
+        if (!category) return;
+        node.setAttribute("href", `#${category.anchor}`);
+      });
+
       const lightbox = document.getElementById("lightbox");
       const lightboxImage = document.getElementById("lightboxImage");
       const lightboxClose = document.getElementById("lightboxClose");
