@@ -161,7 +161,7 @@
         padding: 28px 0;
       }
       .hero {
-        padding: 88px 0 52px;
+        padding: 64px 0 36px;
         display: grid;
         grid-template-columns: 1.02fr 0.98fr;
         gap: 24px;
@@ -179,7 +179,7 @@
         box-shadow: var(--shadow);
       }
       .hero-copy {
-        padding: 42px;
+        padding: 34px;
       }
       .lead {
         font-size: 1.08rem;
@@ -212,7 +212,7 @@
       }
       .hero-visual {
         position: relative;
-        min-height: 580px;
+        min-height: 500px;
         background: #0d0d0d;
       }
       .hero-visual img {
@@ -247,6 +247,25 @@
         align-items: end;
         gap: 24px;
         margin-bottom: 22px;
+      }
+      .project-subtitle {
+        margin: 4px 0 14px;
+        font-family:
+          Inter,
+          Helvetica Neue,
+          Arial,
+          sans-serif;
+        font-size: 0.84rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .project-coming {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 0.84rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
       }
       .disciplines {
         display: grid;
@@ -440,7 +459,7 @@
           grid-template-columns: 1fr;
         }
         .hero-visual {
-          min-height: 440px;
+          min-height: 380px;
         }
         .work,
         .work.wide {
@@ -465,7 +484,7 @@
           padding: 24px;
         }
         .hero {
-          padding-top: 42px;
+          padding-top: 30px;
         }
         h1 {
           font-size: 3.15rem;
@@ -483,9 +502,9 @@
             <span class="sep">·</span>
             <span><a href="#bronze">Bronze</a></span>
             <span class="sep">·</span>
-            <span><a href="#painting">Paintings</a></span>
+            <span><a href="#painting">Paintings & Drawings</a></span>
             <span class="sep">·</span>
-            <span><a href="#dragon">Dragon</a></span>
+            <span><a href="#projects">Projects</a></span>
             <span class="sep">·</span>
             <span><a href="#black-smithing">Blacksmithing</a></span>
           </small>
@@ -534,10 +553,6 @@
             <div class="eyebrow">Disciplines</div>
             <h2>Working across materials and form.</h2>
           </div>
-          <p class="muted" style="max-width: 46ch; margin: 0">
-            Across sculpture, painting, drawing, ceramics, and forged metal,
-            each body of work is tied to touch, weight, and transformation.
-          </p>
         </div>
         <div class="disciplines">
           <div class="discipline">
@@ -583,10 +598,6 @@
             <div class="eyebrow">Ceramics</div>
             <h2>Ceramics</h2>
           </div>
-          <p class="muted" style="max-width: 40ch; margin: 0">
-            Handbuilt and fired forms with tactile surfaces, silhouette, and
-            warmth.
-          </p>
         </div>
         <div class="gallery-grid">
           <article class="work wide js-lightbox-trigger">
@@ -639,9 +650,6 @@
             <div class="eyebrow">Bronze</div>
             <h2>Bronze</h2>
           </div>
-          <p class="muted" style="max-width: 40ch; margin: 0">
-            Metal works with weight, patina, and sculptural presence.
-          </p>
         </div>
         <div class="gallery-grid">
           <article class="work wide js-lightbox-trigger">
@@ -677,12 +685,9 @@
       <section id="painting">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Paintings</div>
-            <h2>Paintings</h2>
+            <div class="eyebrow">Paintings & Drawings</div>
+            <h2>Paintings & Drawings</h2>
           </div>
-          <p class="muted" style="max-width: 40ch; margin: 0">
-            Large painted surfaces with atmosphere, gesture, and memory.
-          </p>
         </div>
         <div class="gallery-grid">
           <article class="work wide js-lightbox-trigger">
@@ -690,79 +695,77 @@
               src="assets/gallery/painting_01.JPG"
               alt="Painting by Udi Berg"
             />
-            <div class="work-meta"><strong>Paintings</strong></div>
+            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/painting_03.jpg"
               alt="Painting by Udi Berg"
             />
-            <div class="work-meta"><strong>Paintings</strong></div>
+            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/painting_04.JPG"
               alt="Painting by Udi Berg"
             />
-            <div class="work-meta"><strong>Paintings</strong></div>
+            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/painting_05.JPG"
               alt="Painting by Udi Berg"
             />
-            <div class="work-meta"><strong>Paintings</strong></div>
+            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/painting_06.JPG"
               alt="Painting by Udi Berg"
             />
-            <div class="work-meta"><strong>Paintings</strong></div>
+            <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
         </div>
       </section>
-      <section id="dragon">
+      <section id="projects">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Dragon Series</div>
-            <h2>Dragon Series</h2>
+            <div class="eyebrow">Projects</div>
+            <h2>Projects</h2>
           </div>
-          <p class="muted" style="max-width: 40ch; margin: 0">
-            A focused body of work exploring myth, movement, and the tension
-            between force and grace.
-          </p>
         </div>
+        <h3 class="project-subtitle">Dragon Series</h3>
         <div class="gallery-grid">
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/dragon_01.jpg"
               alt="Dragon 01 by Udi Berg"
             />
-            <div class="work-meta"><strong>Dragon Series</strong></div>
+            <div class="work-meta"><strong>Project: Dragon Series</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/dragon_02.JPG"
               alt="Dragon 02 by Udi Berg"
             />
-            <div class="work-meta"><strong>Dragon Series</strong></div>
+            <div class="work-meta"><strong>Project: Dragon Series</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/dragon_03.jpg"
               alt="Dragon 03 by Udi Berg"
             />
-            <div class="work-meta"><strong>Dragon Series</strong></div>
+            <div class="work-meta"><strong>Project: Dragon Series</strong></div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/dragon_04.jpg"
               alt="Dragon 04 by Udi Berg"
             />
-            <div class="work-meta"><strong>Dragon Series</strong></div>
+            <div class="work-meta"><strong>Project: Dragon Series</strong></div>
           </article>
         </div>
+        <p class="project-coming">More projects coming soon</p>
       </section>
       <section id="black-smithing">
         <div class="section-head">
@@ -770,9 +773,6 @@
             <div class="eyebrow">Blacksmithing</div>
             <h2>Blacksmithing</h2>
           </div>
-          <p class="muted" style="max-width: 40ch; margin: 0">
-            Forged works shaped by heat, force, and precision.
-          </p>
         </div>
         <div class="gallery-grid">
           <article class="work wide js-lightbox-trigger">
