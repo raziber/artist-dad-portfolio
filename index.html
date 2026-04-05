@@ -6,7 +6,7 @@
     <title>Udi Berg — Sculpture, Painting, Ceramics & Blacksmithing</title>
     <meta
       name="description"
-      content="Udi Berg is a multidisciplinary artist working across sculpture, painting, sketching, ceramics, and blacksmithing."
+      content="I am a multidisciplinary artist working across sculpture, painting, sketching, ceramics, and blacksmithing."
     />
     <style>
       :root {
@@ -163,7 +163,7 @@
       .hero {
         padding: 64px 0 36px;
         display: grid;
-        grid-template-columns: 1.02fr 0.98fr;
+        grid-template-columns: 1.04fr 0.96fr;
         gap: 24px;
         align-items: stretch;
       }
@@ -181,15 +181,28 @@
       .hero-copy {
         padding: 34px;
       }
+      .hero h1 {
+        font-size: clamp(2.6rem, 6.2vw, 5.1rem);
+        margin-bottom: 14px;
+      }
       .lead {
-        font-size: 1.08rem;
+        font-size: 0.98rem;
         max-width: 58ch;
+      }
+      .hero .lead {
+        line-height: 1.5;
       }
       .actions {
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
-        margin-top: 28px;
+        margin-top: 22px;
+      }
+      .hero .button,
+      .hero .button-secondary {
+        min-height: 42px;
+        padding: 0 15px;
+        font-size: 0.9rem;
       }
       .button,
       .button-secondary {
@@ -212,7 +225,7 @@
       }
       .hero-visual {
         position: relative;
-        min-height: 500px;
+        min-height: 560px;
         background: #0d0d0d;
       }
       .hero-visual img {
@@ -235,11 +248,32 @@
         left: 24px;
         right: 24px;
         bottom: 24px;
-        padding: 18px;
+        padding: 26px;
         border-radius: 22px;
         border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(12, 12, 12, 0.56);
+        background: rgba(12, 12, 12, 0.58);
         backdrop-filter: blur(10px);
+      }
+      .visual-caption .eyebrow {
+        margin-bottom: 10px !important;
+      }
+      .hero-disciplines {
+        padding: 28px;
+      }
+      .hero-disciplines h2 {
+        font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+        line-height: 1.05;
+        margin-bottom: 10px;
+      }
+      .hero-disciplines .disciplines {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 14px;
+      }
+      .hero-disciplines .discipline {
+        min-height: 0;
+      }
+      .hero-disciplines .discipline span {
+        font-size: 0.84rem;
       }
       .section-head {
         display: flex;
@@ -274,12 +308,15 @@
         margin-top: 18px;
       }
       .discipline {
+        display: block;
         padding: 12px;
         min-height: 110px;
         border-radius: 22px;
         border: 1px solid var(--line);
         background: rgba(255, 255, 255, 0.03);
         overflow: hidden;
+        text-decoration: none;
+        color: inherit;
       }
       .discipline img {
         width: 100%;
@@ -443,7 +480,7 @@
       }
       @media (max-width: 1100px) {
         .disciplines {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
         }
         .work {
           grid-column: span 6;
@@ -459,7 +496,7 @@
           grid-template-columns: 1fr;
         }
         .hero-visual {
-          min-height: 380px;
+          min-height: 500px;
         }
         .work,
         .work.wide {
@@ -483,6 +520,15 @@
         .panel {
           padding: 24px;
         }
+        .hero-disciplines {
+          padding: 22px;
+        }
+        .hero-disciplines .disciplines {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: clamp(2.25rem, 11vw, 3.5rem);
+        }
         .hero {
           padding-top: 30px;
         }
@@ -504,9 +550,9 @@
             <span class="sep">·</span>
             <span><a href="#painting">Paintings & Drawings</a></span>
             <span class="sep">·</span>
-            <span><a href="#projects">Projects</a></span>
-            <span class="sep">·</span>
             <span><a href="#black-smithing">Blacksmithing</a></span>
+            <span class="sep">·</span>
+            <span><a href="#projects">Projects</a></span>
           </small>
         </div>
         <div class="nav-cluster">
@@ -519,76 +565,66 @@
     </nav>
     <main id="top" class="container">
       <section class="hero">
-        <div class="card hero-copy">
-          <div class="eyebrow">Artist Portfolio</div>
-          <h1>Material, fire, gesture, form.</h1>
-          <p class="lead">
-            Udi Berg is a multidisciplinary artist whose practice moves between
-            sculpture, painting, sketching, ceramics, and blacksmithing —
-            creating work that feels tactile, elemental, and deeply human.
-          </p>
-          <div class="actions">
-            <a class="button" href="#ceramic">View Gallery</a>
-            <a class="button-secondary" href="#contact">Studio Contact</a>
-          </div>
-        </div>
         <div class="card hero-visual">
           <img
             src="assets/gallery/artist_photo.jpg"
-            alt="Portrait of Udi Berg"
+            alt="Portrait from my studio"
           />
           <div class="overlay"></div>
-          <div class="visual-caption">
-            <div class="eyebrow" style="margin-bottom: 8px">Selected work</div>
-            <div>
-              A studio practice shaped by material, process, and the quiet drama
-              of form.
+          <div class="visual-caption hero-copy">
+            <div class="eyebrow">About Me</div>
+            <h1>Material, fire, gesture, form.</h1>
+            <p class="lead">
+              I am a multidisciplinary artist whose practice moves between
+              sculpture, painting, sketching, ceramics, and blacksmithing,
+              creating work that feels tactile, elemental, and deeply human.
+            </p>
+            <div class="actions">
+              <a class="button" href="#ceramic">View Gallery</a>
+              <a class="button-secondary" href="#contact">Studio Contact</a>
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Disciplines</div>
-            <h2>Working across materials and form.</h2>
-          </div>
-        </div>
-        <div class="disciplines">
-          <div class="discipline">
-            <img
-              src="assets/gallery/bronze_01.jpg"
-              alt="Sculpture by Udi Berg"
-            />
-            <strong>Sculpture</strong
-            ><span>Form, volume, physical presence.</span>
-          </div>
-          <div class="discipline">
-            <img
-              src="assets/gallery/painting_01.JPG"
-              alt="Painting by Udi Berg"
-            />
-            <strong>Painting</strong><span>Surface, atmosphere, memory.</span>
-          </div>
-          <div class="discipline">
-            <img src="assets/gallery/dragon_02.JPG" alt="Sketch by Udi Berg" />
-            <strong>Paintings & Drawings</strong
-            ><span>Gesture, urgency, first thought.</span>
-          </div>
-          <div class="discipline">
-            <img
-              src="assets/gallery/ceramic_01.jpg"
-              alt="Ceramic work by Udi Berg"
-            />
-            <strong>Ceramics</strong><span>Earth, fire, touch, ritual.</span>
-          </div>
-          <div class="discipline">
-            <img
-              src="assets/gallery/black_smithing_01.JPG"
-              alt="Blacksmithing by Udi Berg"
-            />
-            <strong>Blacksmithing</strong
-            ><span>Heat, force, forged precision.</span>
+        <div class="card hero-disciplines">
+          <div class="disciplines">
+            <a class="discipline" href="#bronze">
+              <img
+                src="assets/gallery/bronze_01.jpg"
+                alt="Sculpture from my studio"
+              />
+              <strong>Sculpture</strong
+              ><span>Form, volume, physical presence.</span>
+            </a>
+            <a class="discipline" href="#painting">
+              <img
+                src="assets/gallery/painting_01.JPG"
+                alt="Painting from my studio"
+              />
+              <strong>Painting</strong><span>Surface, atmosphere, memory.</span>
+            </a>
+            <a class="discipline" href="#painting">
+              <img
+                src="assets/gallery/dragon_02.JPG"
+                alt="Sketch from my studio"
+              />
+              <strong>Paintings & Drawings</strong
+              ><span>Gesture, urgency, first thought.</span>
+            </a>
+            <a class="discipline" href="#ceramic">
+              <img
+                src="assets/gallery/ceramic_01.jpg"
+                alt="Ceramic work from my studio"
+              />
+              <strong>Ceramics</strong><span>Earth, fire, touch, ritual.</span>
+            </a>
+            <a class="discipline" href="#black-smithing">
+              <img
+                src="assets/gallery/black_smithing_01.JPG"
+                alt="Blacksmithing from my studio"
+              />
+              <strong>Blacksmithing</strong
+              ><span>Heat, force, forged precision.</span>
+            </a>
           </div>
         </div>
       </section>
@@ -603,42 +639,42 @@
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_06.JPG"
-              alt="Ceramic work by Udi Berg"
+              alt="Ceramic work from my studio"
             />
             <div class="work-meta"><strong>Ceramics</strong></div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_04.JPG"
-              alt="Ceramic work by Udi Berg"
+              alt="Ceramic work from my studio"
             />
             <div class="work-meta"><strong>Ceramics</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_08.JPG"
-              alt="Ceramic work by Udi Berg"
+              alt="Ceramic work from my studio"
             />
             <div class="work-meta"><strong>Ceramics</strong></div>
           </article>
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_11.JPG"
-              alt="Ceramic work by Udi Berg"
+              alt="Ceramic work from my studio"
             />
             <div class="work-meta"><strong>Ceramics</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_14.JPG"
-              alt="Ceramic work by Udi Berg"
+              alt="Ceramic work from my studio"
             />
             <div class="work-meta"><strong>Ceramics</strong></div>
           </article>
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/ceramic_16.JPG"
-              alt="Ceramic work by Udi Berg"
+              alt="Ceramic work from my studio"
             />
             <div class="work-meta"><strong>Ceramics</strong></div>
           </article>
@@ -655,28 +691,28 @@
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/bronze_01.jpg"
-              alt="Bronze work by Udi Berg"
+              alt="Bronze work from my studio"
             />
             <div class="work-meta"><strong>Bronze</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/bronze_02.JPG"
-              alt="Bronze work by Udi Berg"
+              alt="Bronze work from my studio"
             />
             <div class="work-meta"><strong>Bronze</strong></div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/bronze_04.JPG"
-              alt="Bronze work by Udi Berg"
+              alt="Bronze work from my studio"
             />
             <div class="work-meta"><strong>Bronze</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/bronze_05.JPG"
-              alt="Bronze work by Udi Berg"
+              alt="Bronze work from my studio"
             />
             <div class="work-meta"><strong>Bronze</strong></div>
           </article>
@@ -693,35 +729,35 @@
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/painting_01.JPG"
-              alt="Painting by Udi Berg"
+              alt="Painting from my studio"
             />
             <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/painting_03.jpg"
-              alt="Painting by Udi Berg"
+              alt="Painting from my studio"
             />
             <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/painting_04.JPG"
-              alt="Painting by Udi Berg"
+              alt="Painting from my studio"
             />
             <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/painting_05.JPG"
-              alt="Painting by Udi Berg"
+              alt="Painting from my studio"
             />
             <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/painting_06.JPG"
-              alt="Painting by Udi Berg"
+              alt="Painting from my studio"
             />
             <div class="work-meta"><strong>Paintings & Drawings</strong></div>
           </article>
@@ -739,28 +775,28 @@
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/dragon_01.jpg"
-              alt="Dragon 01 by Udi Berg"
+              alt="Dragon 01 from my studio"
             />
             <div class="work-meta"><strong>Project: Dragon Series</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/dragon_02.JPG"
-              alt="Dragon 02 by Udi Berg"
+              alt="Dragon 02 from my studio"
             />
             <div class="work-meta"><strong>Project: Dragon Series</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/dragon_03.jpg"
-              alt="Dragon 03 by Udi Berg"
+              alt="Dragon 03 from my studio"
             />
             <div class="work-meta"><strong>Project: Dragon Series</strong></div>
           </article>
           <article class="work tall js-lightbox-trigger">
             <img
               src="assets/gallery/dragon_04.jpg"
-              alt="Dragon 04 by Udi Berg"
+              alt="Dragon 04 from my studio"
             />
             <div class="work-meta"><strong>Project: Dragon Series</strong></div>
           </article>
@@ -778,14 +814,14 @@
           <article class="work wide js-lightbox-trigger">
             <img
               src="assets/gallery/black_smithing_01.JPG"
-              alt="Blacksmithing work by Udi Berg"
+              alt="Blacksmithing work from my studio"
             />
             <div class="work-meta"><strong>Blacksmithing</strong></div>
           </article>
           <article class="work js-lightbox-trigger">
             <img
               src="assets/gallery/black_smithing_02.JPG"
-              alt="Blacksmithing work by Udi Berg"
+              alt="Blacksmithing work from my studio"
             />
             <div class="work-meta"><strong>Blacksmithing</strong></div>
           </article>
@@ -794,7 +830,7 @@
       <section id="about" class="split">
         <div class="card panel">
           <div class="eyebrow">About</div>
-          <h2>Udi Berg</h2>
+          <h2>About Me</h2>
           <p>
             I work across sculpture, painting, ceramics, blacksmithing, and
             drawing. My practice is guided by material: clay, metal, pigment,
@@ -815,7 +851,7 @@
           <h2>Studio inquiries</h2>
           <p class="muted">
             For exhibitions, commissions, acquisitions, and professional
-            inquiries, please get in touch.
+            inquiries, please get in touch with me.
           </p>
           <div class="contact-list">
             <div class="contact-item">
